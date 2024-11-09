@@ -1,21 +1,160 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
 
 :root {
-  --background: #ffffff;
-  --foreground: #171717;
+  --background: #f3f4f6; /* Light background color */
+  --foreground: #000000; /* Dark text color */
 }
 
 @media (prefers-color-scheme: dark) {
   :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
+    --background: #010c2a; /* Darker background */
+    --foreground: #f3f4f6; /* Light text color for dark mode */
   }
 }
 
-body {
-  color: var(--foreground);
-  background: var(--background);
-  font-family: Arial, Helvetica, sans-serif;
+@layer base {
+  body {
+    color: var(--foreground);
+    background: var(--background);
+    font-family: Arial, Helvetica, sans-serif;
+    transition: background-color 0.3s ease, color 0.3s ease; /* Add a smooth transition */
+  }
 }
+
+.max-container {
+  @apply mx-auto max-w-[1440px];
+}
+
+.padding-container {
+  @apply 3xl:px-0 px-6 lg:px-16;
+}
+
+.flexCenter {
+  @apply flex items-center justify-center;
+}
+
+/* Custom Font Sizes */
+.regular-64 {
+  @apply text-[64px] font-[400] leading-[120%];
+}
+
+.regular-40 {
+  @apply text-[40px] font-[400] leading-[120%];
+}
+
+.regular-32 {
+  @apply text-[32px] font-[400];
+}
+
+.regular-24 {
+  @apply text-[24px] font-[400];
+}
+
+.regular-20 {
+  @apply text-[20px] font-[400];
+}
+
+.regular-18 {
+  @apply text-[18px] font-[400];
+}
+
+.regular-16 {
+  @apply text-[16px] font-[400];
+}
+
+.regular-14 {
+  @apply text-[14px] font-[400];
+}
+
+/* Custom Font Sizes - Bold */
+.medium-14 {
+  @apply text-[14px] font-[600];
+}
+
+.bold-88 {
+  @apply text-[88px] font-[700] leading-[120%];
+}
+
+.bold-64 {
+  @apply text-[64px] font-[700] leading-[120%];
+}
+
+.bold-52 {
+  @apply text-[52px] font-[700] leading-[120%];
+}
+
+.bold-40 {
+  @apply text-[40px] font-[700] leading-[120%];
+}
+
+.bold-32 {
+  @apply text-[32px] font-[700] leading-[120%];
+}
+
+.bold-20 {
+  @apply text-[20px] font-[700];
+}
+
+.bold-18 {
+  @apply text-[18px] font-[700];
+}
+
+.bold-16 {
+  @apply text-[16px] font-[700];
+}
+
+/* Gradient Text */
+.blue-gradient {
+  background: linear-gradient(
+    120deg,
+    #0025ff 7.87%,
+    #0076ff 49%,
+    #0081ff 36.22%
+  );
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.cyan-gradient {
+  background: linear-gradient(120deg, #00f0cf 12.87%, #00ff6f 49%, #00f0ff 80%);
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+/* Customize the scrollbar for WebKit-based browsers (like Chrome)
+@layer base {
+  ::-webkit-scrollbar {
+    width: 12px;
+  }
+
+  ::-webkit-scrollbar-track {
+    background: #f1f1f1;
+  }
+
+  ::-webkit-scrollbar-thumb {
+    background-color: #1e90ff;
+    border-radius: 6px;
+    border: 3px solid #f1f1f1;
+  }
+
+  ::-webkit-scrollbar-thumb:hover {
+    background-color: var(--background);
+  }
+}
+
+/* Hide scrollbar for Chrome, Safari and Opera 
+.hide-scrollbar::-webkit-scrollbar {
+  display: none;
+}
+*/
+
+/* Hide scrollbar for IE, Edge and Firefox 
+.hide-scrollbar {
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+} */
