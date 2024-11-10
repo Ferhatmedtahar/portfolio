@@ -1,5 +1,6 @@
 import svgToDataUri from "mini-svg-data-uri";
 import { Config } from "tailwindcss";
+import tailwindcssAnimate from "tailwindcss-animate";
 import flattenColorPalette from "tailwindcss/lib/util/flattenColorPalette";
 
 function addVariablesForColors({
@@ -25,14 +26,12 @@ const config: Config = {
     "./src/components/**/*.{js,ts,jsx,tsx,mdx}",
     "./src/app/**/*.{js,ts,jsx,tsx,mdx}",
   ],
-  darkMode: "class", // Enables dark mode
+  darkMode: ["class", "class"], // Enables dark mode
   theme: {
     extend: {
       screens: {
         xxs: "300px",
         xs: "380px",
-        // md: "768px",
-        // lg: "1024px",
         xl: "1200px",
         "3xl": "1680px",
         "4xl": "2200px",
@@ -42,18 +41,21 @@ const config: Config = {
       },
       borderRadius: {
         "5xl": "40px",
+        lg: "var(--radius)",
+        md: "calc(var(--radius) - 2px)",
+        sm: "calc(var(--radius) - 4px)",
       },
       colors: {
-        "primary-100": "#C3D6F1", // Lighter Soft Blue with a warmer tone
-        "primary-200": "#A3C7EE", // Lighter Light Blue with a warmer tone
-        "primary-300": "#84B4F3", // Lighter Blue with a slight cool tone
-        "primary-400": "#4F86E2", // Darker Light Azure
-        "primary-500": "#2A6FDA", // Darker Primary Blue
-        "primary-600": "#1E50C6", // Darker Standard Blue
-        "primary-700": "#173A9B", // Darker Medium Blue
-        "primary-800": "#162C7D", // Darker Dark Blue
-        "primary-900": "#061059", //  Dark Blue
-        "primary-950": "#021038", // Very Dark Blue
+        "primary-100": "#C3D6F1",
+        "primary-200": "#A3C7EE",
+        "primary-300": "#84B4F3",
+        "primary-400": "#4F86E2",
+        "primary-500": "#2A6FDA",
+        "primary-600": "#1E50C6",
+        "primary-700": "#173A9B",
+        "primary-800": "#162C7D",
+        "primary-900": "#061059",
+        "primary-950": "#021038",
         background: "var(--background)",
         foreground: "var(--foreground)",
       },
@@ -62,12 +64,20 @@ const config: Config = {
       },
       keyframes: {
         "accordion-down": {
-          from: { height: "0" },
-          to: { height: "var(--radix-accordion-content-height)" },
+          from: {
+            height: "0",
+          },
+          to: {
+            height: "var(--radix-accordion-content-height)",
+          },
         },
         "accordion-up": {
-          from: { height: "var(--radix-accordion-content-height)" },
-          to: { height: "0" },
+          from: {
+            height: "var(--radix-accordion-content-height)",
+          },
+          to: {
+            height: "0",
+          },
         },
       },
       animation: {
@@ -100,6 +110,7 @@ const config: Config = {
         { values: flattenColorPalette(theme("backgroundColor")), type: "color" }
       );
     },
+    tailwindcssAnimate, // Use the imported variable here
   ],
 };
 

@@ -3,8 +3,8 @@ import TechCard from "./TechCard";
 
 export default function CurrentTechnologies() {
   return (
-    <section className="max-container padding-container pt-10 flex   flex-col gap-10">
-      <h1 className="text-3xl min-[430px]:text-4xl md:text-5xl font-bold text-primary-300 ">
+    <section className=" max-container padding-container pt-16 flex    flex-col gap-10">
+      <h1 className="  tracking-[0.020rem]  text-3xl min-[430px]:text-4xl md:text-5xl font-semibold text-primary-300 ">
         Current Technologies
       </h1>
 

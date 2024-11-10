@@ -15,7 +15,7 @@ export default function TechCard({
   return (
     <div className=" flex items-center flex-1 gap-5 p-2.5 rounded-xl border border-primary-700  bg-primary-900  hover:bg-primary-800 dark:hover:bg-dark-300 hover:border-primary-500  transition-colors duration-300">
       <div
-        className={`p-3  rounded-lg w-fit`}
+        className={`p-3  rounded-xl w-fit`}
         style={{ backgroundColor: `${color}33` }}
       >
         <Image
@@ -30,8 +30,10 @@ export default function TechCard({
         />
       </div>
       <div>
-        <h4 className="text-lg font-medium">{name}</h4>
-        <p className="text-slate-100/80  text-sm">{description}</p>
+        <h4 className="text-lg font-medium cursor-default">{name}</h4>
+        <p className="text-slate-100/80  text-sm cursor-default">
+          {description}
+        </p>
       </div>
     </div>
   );

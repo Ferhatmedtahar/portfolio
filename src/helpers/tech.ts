@@ -15,13 +15,13 @@ export const techStack = [
     name: "React",
     image: "/logos/reactjs.svg",
     color: "#61DAFB",
-    description: "UI library for web apps.",
+    description: "JavaScript UI library.",
   },
   {
     name: "Next.js",
     image: "/logos/nextjs.svg",
     color: "#200000",
-    description: "React framework for SSR.",
+    description: "The React Framework.",
   },
   {
     name: "Tailwind CSS",
