@@ -31,6 +31,9 @@ const config: Config = {
       screens: {
         xxs: "300px",
         xs: "380px",
+        // md: "768px",
+        // lg: "1024px",
+        xl: "1200px",
         "3xl": "1680px",
         "4xl": "2200px",
       },
@@ -41,9 +44,9 @@ const config: Config = {
         "5xl": "40px",
       },
       colors: {
-        "primary-100": "#B1C8E7", // Darker Light Blue
-        "primary-200": "#8BB8E4", // Darker Light Blue
-        "primary-300": "#6A9FEB", // Darker Soft Blue
+        "primary-100": "#C3D6F1", // Lighter Soft Blue with a warmer tone
+        "primary-200": "#A3C7EE", // Lighter Light Blue with a warmer tone
+        "primary-300": "#84B4F3", // Lighter Blue with a slight cool tone
         "primary-400": "#4F86E2", // Darker Light Azure
         "primary-500": "#2A6FDA", // Darker Primary Blue
         "primary-600": "#1E50C6", // Darker Standard Blue
