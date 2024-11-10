@@ -29,6 +29,15 @@ const config: Config = {
   darkMode: ["class", "class"], // Enables dark mode
   theme: {
     extend: {
+      backgroundImage: {
+        "certificate-01": "url('/certificates/deep-javascript-v3-dark.webp') ",
+        "certificate-02":
+          "url('/certificates/javascript-hard-parts-v2-dark.webp')",
+        "certificate-03":
+          "url('/certificates/UC-92f04f6e-cb77-4765-a526-6432e3671b07.webp')",
+        "certificate-04":
+          "url('/certificates/UC-19ff328e-bce1-4a59-8674-ef69257b1bbc.webp')",
+      },
       screens: {
         xxs: "300px",
         xs: "380px",
@@ -63,6 +72,10 @@ const config: Config = {
         poppins: ["Poppins", "serif"],
       },
       keyframes: {
+        move: {
+          "0%": { transform: "translateX(-200px)" },
+          "100%": { transform: "translateX(200px)" },
+        },
         "accordion-down": {
           from: {
             height: "0",
@@ -83,6 +96,7 @@ const config: Config = {
       animation: {
         "accordion-down": "accordion-down 0.2s ease-out",
         "accordion-up": "accordion-up 0.2s ease-out",
+        move: "move 5s linear infinite",
       },
     },
   },

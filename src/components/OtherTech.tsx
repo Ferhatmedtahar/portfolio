@@ -17,9 +17,9 @@ const slugs = [
   "visualstudiocode",
   "figma",
 ];
-export function IconCloudDemo() {
+export function OtherTech() {
   return (
-    <div className="relative flex size-full  max-w-lg items-center justify-center overflow-hidden rounded-lg bg-background px-20 pb-20 pt-8 ">
+    <div className="    lg:order-last relative flex size-full  max-w-lg items-center justify-center overflow-hidden rounded-lg bg-background px-2 py-3 ">
       <IconCloud iconSlugs={slugs} />
     </div>
   );
