@@ -89,7 +89,7 @@ export const DirectionAwareHover = ({
             <Image
               alt="image"
               className={cn(
-                "h-full w-full object-cover scale-[1.15]",
+                "h-full w-full object-cover scale-[1.10]",
                 imageClassName
               )}
               width="1000"

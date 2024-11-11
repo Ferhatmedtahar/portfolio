@@ -48,14 +48,10 @@ const config: Config = {
       maxWidth: {
         "10xl": "1512px",
       },
-      borderRadius: {
-        "5xl": "40px",
-        lg: "var(--radius)",
-        md: "calc(var(--radius) - 2px)",
-        sm: "calc(var(--radius) - 4px)",
-      },
+
       colors: {
-        "primary-100": "#C3D6F1",
+        "primary-50": "#edfafc",
+        "primary-100": "#e0f3ff",
         "primary-200": "#A3C7EE",
         "primary-300": "#84B4F3",
         "primary-400": "#4F86E2",

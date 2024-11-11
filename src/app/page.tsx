@@ -1,4 +1,3 @@
-import Certificates from "@/components/sections/Certificates";
 import Contact from "@/components/sections/Contact";
 import CurrentTechnologies from "@/components/sections/CurrentTechnologies";
 import Hero from "@/components/sections/Hero";
@@ -9,7 +8,6 @@ export default function Home() {
     <>
       <Hero />
       <CurrentTechnologies />
-      <Certificates />
       <Projects />
       <Contact />
     </>
