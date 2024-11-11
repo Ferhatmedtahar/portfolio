@@ -1,3 +1,5 @@
+import { Download } from "lucide-react";
+import { Testimonial } from "../Testomonial";
 export default function Hero() {
   return (
     <div className=" font-poppins font-medium px-20 h-[99vh] w-full  bg-primary-900  bg-grid-primary-500/[0.2] relative flexCenter">
@@ -12,6 +14,18 @@ export default function Hero() {
           Hi, I&apos;m Ferhat, I create intuitive, visually stunning and highly
           functional web applications.
         </p>
+        <div className=" flex items-center  gap-6">
+          <button className="inline-flex h-12 animate-shimmer items-center justify-center rounded-md border border-primary-800 bg-[linear-gradient(110deg,#061059,45%,#162C7D,55%,#061059)] bg-[length:200%_100%] px-6 font-medium text-primary-200 transition-colors focus:outline-none focus:ring focus:ring-primary-700 ">
+            See My Work
+          </button>
+          <div className="flex gap-2">
+            <Download className="w-6 h-6 text-primary-500" />
+            <p className=" text-base font-normal font-poppins text-primary-100/90">
+              Download CV
+            </p>
+          </div>
+        </div>
+        <Testimonial />
       </div>
     </div>
   );
