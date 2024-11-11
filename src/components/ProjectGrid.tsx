@@ -1,6 +1,6 @@
 import { columns } from "@/helpers/projectsData";
-import ProjectCard from "./Project";
 // import { OtherTech } from "../components/OtherTech";
+import ProjectCard from "./Project";
 // <OtherTech />
 
 export default function ProjectGrid() {
@@ -20,6 +20,7 @@ export default function ProjectGrid() {
           ))}
         </div>
       ))}
+      {/* <OtherTech /> */}
     </div>
   );
 }

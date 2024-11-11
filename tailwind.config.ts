@@ -68,6 +68,19 @@ const config: Config = {
         poppins: ["Poppins", "serif"],
       },
       keyframes: {
+        "border-beam": {
+          "100%": {
+            "offset-distance": "100%",
+          },
+        },
+        meteor: {
+          "0%": { transform: "rotate(215deg) translateX(0)", opacity: "1" },
+          "70%": { opacity: "1" },
+          "100%": {
+            transform: "rotate(215deg) translateX(-500px)",
+            opacity: "0",
+          },
+        },
         move: {
           "0%": { transform: "translateX(-200px)" },
           "100%": { transform: "translateX(200px)" },
@@ -93,6 +106,8 @@ const config: Config = {
         "accordion-down": "accordion-down 0.2s ease-out",
         "accordion-up": "accordion-up 0.2s ease-out",
         move: "move 5s linear infinite",
+        meteor: "meteor 5s linear infinite",
+        "border-beam": "border-beam calc(var(--duration)*1s) infinite linear",
       },
     },
   },
