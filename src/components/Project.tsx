@@ -29,18 +29,21 @@ export default function ProjectCard({
           <Image
             src={image}
             alt={projectName}
-            width={600}
-            height={600}
-            priority={link === "/projects/edulink"}
+            width={2000}
+            quality={100}
+            height={2000}
+            loading="lazy"
             className="w-full object-cover transition-transform duration-500 ease-in-out group-hover:scale-105"
           />
           <div className="absolute bottom-0 left-0 right-0 top-72 bg-gradient-to-t from-primary-900  to-transparent flex items-end opacity-0 group-hover:opacity-100 transition-opacity duration-300 ease-in-out">
-            <div className="p-4">
-              <h1 className="text-primary-50 text-lg font-semibold">
+            <div className="pb-12 px-5 lg:p-5  ">
+              <h1 className="text-primary-300/95 text-lg font-semibold ">
                 {projectName}
               </h1>
-              <p className="text-primary-100 text-sm">{description}</p>
-              <div className="flex flex-wrap gap-2 mt-2 max-w-lg">
+              <p className="text-primary-100/90 text-sm  hidden lg:block">
+                {description}
+              </p>
+              <div className="flex-wrap gap-2 mt-2 max-w-lg ">
                 {tags.map(function (tag: string) {
                   return (
                     <div

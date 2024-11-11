@@ -5,7 +5,7 @@ export const contacts = [
   {
     id: 1,
     social: "Email",
-    link: "ferhattaher00@gmail.com",
+    link: "mailto:ferhattaher00@gmail.com",
     icon: emailIcon,
   },
   {

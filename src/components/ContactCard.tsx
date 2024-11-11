@@ -18,14 +18,14 @@ export default function ContactCard({
     <Link
       href={link}
       className={
-        "flex h-[300px] w-full flex-col gap-4 lg:h-[250px] lg:flex-row z-20  relative "
+        "flex h-[200px] w-full flex-col gap-4 lg:h-[250px] lg:flex-row z-20  relative "
       }
     >
       {social == "Linkedin" && (
-        <div className="absolute inset-0  z-10 pointer-events-none  rounded-xl">
+        <div className="absolute inset-0  z-10 pointer-events-none  rounded-xl overflow-hidden">
           <BorderBeam
             size={160}
-            duration={13}
+            duration={10}
             delay={9}
             borderWidth={2}
             colorFrom={"#23A6E4"}
