@@ -36,7 +36,7 @@ export default function ContactCard({
       {social == "GitHub" && (
         <Particles
           className="absolute inset-0  z-10 pointer-events-none"
-          quantity={180}
+          quantity={220}
           ease={160}
           staticity={10}
           size={0.4}

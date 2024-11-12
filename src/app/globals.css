@@ -42,12 +42,15 @@
 
 /* Gradient Text */
 .blue-gradient {
+  padding: 5px;
+  line-height: 20px;
   background: linear-gradient(
     120deg,
     #0025ff 16.87%,
     #0056ff 40%,
     #0076ff 46.22%
   );
+
   background-clip: text;
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
