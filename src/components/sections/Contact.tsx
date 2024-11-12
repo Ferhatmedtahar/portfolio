@@ -3,7 +3,10 @@ import ContactCard from "../ContactCard";
 
 export default function Contact() {
   return (
-    <section className="pb-20 max-container padding-container pt-16 flex    flex-col gap-16  ">
+    <section
+      id="contact"
+      className="pb-20 max-container padding-container pt-16 flex  flex-col gap-16  "
+    >
       <h1 className="  tracking-[0.030rem]  text-2xl min-[430px]:text-2xl      md:text-4xl font-medium  text-primary-200 underline  underline-offset-[6px] ">
         Contants
       </h1>

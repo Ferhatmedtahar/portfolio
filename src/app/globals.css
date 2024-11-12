@@ -4,8 +4,8 @@
 @tailwind utilities;
 
 :root {
-  --background: #e2e8f0; /* Light background color */
-  --foreground: #000000; /* Dark text color */
+  --background: #010c2a; /* Light background color */
+  --foreground: #e2e8f0; /* Dark text color */
 }
 
 @media (prefers-color-scheme: dark) {
@@ -16,11 +16,14 @@
 }
 
 @layer base {
+  html {
+    scroll-behavior: smooth;
+  }
   body {
     color: var(--foreground);
-    background: var(--background);
-    font-family: Arial, Helvetica, sans-serif;
-    transition: background-color 0.3s ease, color 0.3s ease; /* Add a smooth transition */
+    background-color: var(--background);
+    font-family: "Poppins", sans-serif;
+    transition: background-color 0.3s ease, color 0.3s ease;
   }
 }
 
@@ -36,83 +39,13 @@
   @apply flex items-center justify-center;
 }
 
-/* Custom Font Sizes */
-.regular-64 {
-  @apply text-[64px] font-[400] leading-[120%];
-}
-
-.regular-40 {
-  @apply text-[40px] font-[400] leading-[120%];
-}
-
-.regular-32 {
-  @apply text-[32px] font-[400];
-}
-
-.regular-24 {
-  @apply text-[24px] font-[400];
-}
-
-.regular-20 {
-  @apply text-[20px] font-[400];
-}
-
-.regular-18 {
-  @apply text-[18px] font-[400];
-}
-
-.regular-16 {
-  @apply text-[16px] font-[400];
-}
-
-.regular-14 {
-  @apply text-[14px] font-[400];
-}
-
-/* Custom Font Sizes - Bold */
-.medium-14 {
-  @apply text-[14px] font-[600];
-}
-
-.bold-88 {
-  @apply text-[88px] font-[700] leading-[120%];
-}
-
-.bold-64 {
-  @apply text-[64px] font-[700] leading-[120%];
-}
-
-.bold-52 {
-  @apply text-[52px] font-[700] leading-[120%];
-}
-
-.bold-40 {
-  @apply text-[40px] font-[700] leading-[120%];
-}
-
-.bold-32 {
-  @apply text-[32px] font-[700] leading-[120%];
-}
-
-.bold-20 {
-  @apply text-[20px] font-[700];
-}
-
-.bold-18 {
-  @apply text-[18px] font-[700];
-}
-
-.bold-16 {
-  @apply text-[16px] font-[700];
-}
-
 /* Gradient Text */
 .blue-gradient {
   background: linear-gradient(
     120deg,
     #0025ff 16.87%,
-    #0066ff 40%,
-    #0081ff 36.22%
+    #0056ff 40%,
+    #0076ff 46.22%
   );
   background-clip: text;
   -webkit-background-clip: text;

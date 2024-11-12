@@ -4,7 +4,10 @@ import ProjectGrid from "../ProjectGrid";
 
 export default function Projects() {
   return (
-    <section className=" max-container padding-container pt-12 lg:pt-24 ">
+    <section
+      id="projects"
+      className=" max-container padding-container pt-12 lg:pt-24 "
+    >
       <h1 className="  tracking-[0.030rem]  text-2xl min-[430px]:text-2xl md:text-4xl font-medium  text-primary-200 underline  underline-offset-[6px] ">
         Latest Projects
       </h1>
