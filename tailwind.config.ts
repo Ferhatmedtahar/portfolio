@@ -66,6 +66,7 @@ const config: Config = {
       },
       fontFamily: {
         poppins: ["Poppins", "serif"],
+        Merriweather: ["Merriweather", "serif"],
       },
       keyframes: {
         shimmer: {

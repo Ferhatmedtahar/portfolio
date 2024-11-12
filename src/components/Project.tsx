@@ -7,14 +7,14 @@ type ProjectProps = {
   projectName: string;
   image: string;
   link: string;
-  description: string;
+  summary: string;
   tags: string[];
 };
 
 export default function ProjectCard({
   projectName,
   image,
-  description,
+  summary,
   link,
   tags,
 }: ProjectProps) {
@@ -41,7 +41,7 @@ export default function ProjectCard({
                 {projectName}
               </h1>
               <p className="text-primary-100/90 text-sm  hidden lg:block">
-                {description}
+                {summary}
               </p>
               <div className="flex-wrap gap-2 mt-2 max-w-lg ">
                 {tags.map(function (tag: string) {

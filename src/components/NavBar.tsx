@@ -12,7 +12,7 @@ const links = [
     icon: (
       <IconHome className="h-full w-full text-primary-200 sm:text-primary-500" />
     ),
-    href: "#hero",
+    href: "/#hero",
   },
   {
     title: "Technologies",
@@ -22,7 +22,7 @@ const links = [
         className="h-full w-full text-primary-200 sm:text-primary-500"
       />
     ),
-    href: "#tech",
+    href: "/#tech",
   },
 
   {
@@ -30,7 +30,7 @@ const links = [
     icon: (
       <IconTerminal2 className="h-full w-full text-primary-200 sm:text-primary-500" />
     ),
-    href: "#projects",
+    href: "/#projects",
   },
 
   {
@@ -41,7 +41,7 @@ const links = [
         stroke={2}
       />
     ),
-    href: "#contact",
+    href: "/#contact",
   },
 ];
 
