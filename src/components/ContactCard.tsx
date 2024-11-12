@@ -18,7 +18,7 @@ export default function ContactCard({
     <Link
       href={link}
       className={
-        "flex h-[200px] w-full flex-col gap-4 lg:h-[250px] lg:flex-row z-20  relative "
+        "flex h-[200px] w-full flex-col gap-4 lg:h-[250px] lg:flex-row   relative "
       }
     >
       {social == "Linkedin" && (

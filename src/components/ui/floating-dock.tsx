@@ -1,8 +1,3 @@
-/**
- * Note: Use position fixed according to your needs
- * Desktop navbar is better positioned at the bottom
- * Mobile navbar is better positioned at bottom right.
- **/
 "use client";
 import { cn } from "@/lib/utils";
 import { IconLayoutNavbarCollapse } from "@tabler/icons-react";
@@ -11,11 +6,34 @@ import {
   MotionValue,
   motion,
   useMotionValue,
+  useMotionValueEvent,
+  useScroll,
   useSpring,
   useTransform,
 } from "framer-motion";
 import Link from "next/link";
 import { useRef, useState } from "react";
+
+const useScrollVisibility = () => {
+  const { scrollY } = useScroll();
+  const [visible, setVisible] = useState(true);
+  const [lastScrollY, setLastScrollY] = useState(0);
+
+  useMotionValueEvent(scrollY, "change", (current) => {
+    const direction = current - lastScrollY;
+
+    // Show the navbar if scrolling upwards or near the top of the page
+    if (scrollY.get() < 50 || direction < 0) {
+      setVisible(true);
+    } else if (direction > 0) {
+      setVisible(false);
+    }
+
+    setLastScrollY(current);
+  });
+
+  return visible;
+};
 
 export const FloatingDock = ({
   items,
@@ -42,53 +60,41 @@ const FloatingDockMobile = ({
   className?: string;
 }) => {
   const [open, setOpen] = useState(false);
+  const visible = useScrollVisibility();
+
   return (
-    <div className={cn("relative block md:hidden", className)}>
-      <AnimatePresence>
-        {open && (
-          <motion.div
-            layoutId="nav"
-            className="absolute bottom-full mb-2 inset-x-0 flex flex-col gap-2"
-          >
-            {items.map((item, idx) => (
-              <motion.div
-                key={item.title}
-                initial={{ opacity: 0, y: 10 }}
-                animate={{
-                  opacity: 1,
-                  y: 0,
-                }}
-                exit={{
-                  opacity: 0,
-                  y: 10,
-                  transition: {
-                    delay: idx * 0.05,
-                  },
-                }}
-                transition={{ delay: (items.length - 1 - idx) * 0.05 }}
-              >
-                <Link
-                  href={item.href}
-                  key={item.title}
-                  className="h-10 w-10 rounded-full bg-primary-500 flex items-center justify-center"
-                >
-                  <div className="h-4 w-4">{item.icon}</div>
-                </Link>
-              </motion.div>
-            ))}
-          </motion.div>
-        )}
-      </AnimatePresence>
+    <div
+      className={cn(
+        "fixed top-4 transition-all duration-300 md:hidden",
+        visible ? "right-5" : "right-2",
+        className
+      )}
+    >
+      {/* Floating Button */}
       <button
         onClick={() => setOpen(!open)}
-        className="h-10 w-10 rounded-full bg-primary-500 dark:bg-neutral-800 flex items-center justify-center"
+        className="h-10 w-10 rounded-full bg-primary-500 flex items-center justify-center border border-primary-950"
       >
-        <IconLayoutNavbarCollapse className="h-5 w-5 text-neutral-500 " />
+        <IconLayoutNavbarCollapse className="h-5 w-5 text-primary-200" />
       </button>
+
+      {/* Horizontal Items Menu */}
+      {open && (
+        <div className="absolute top-11 right-0 mb-2 flex flex-row gap-2">
+          {items.map((item) => (
+            <Link
+              key={item.title}
+              href={item.href}
+              className="h-10 w-10 px-0.5 py-2 rounded-full border border-primary-950  bg-primary-500 flex items-center justify-center"
+            >
+              {item.icon}
+            </Link>
+          ))}
+        </div>
+      )}
     </div>
   );
 };
-
 const FloatingDockDesktop = ({
   items,
   className,
@@ -96,13 +102,16 @@ const FloatingDockDesktop = ({
   items: { title: string; icon: React.ReactNode; href: string }[];
   className?: string;
 }) => {
+  const visible = useScrollVisibility();
   let mouseX = useMotionValue(Infinity);
+
   return (
     <motion.div
       onMouseMove={(e) => mouseX.set(e.pageX)}
       onMouseLeave={() => mouseX.set(Infinity)}
       className={cn(
-        "mx-auto hidden md:flex h-16 gap-4 items-end  rounded-2xl bg-primary-800 border border-primary-500 px-4 pb-3",
+        "fixed bottom-4 left-1/2 transform -translate-x-1/2 hidden md:flex h-16 gap-4 items-end rounded-2xl bg-primary-800 border border-primary-500 px-4 pb-3 transition-transform duration-300",
+        visible ? "translate-y-0" : "translate-y-full",
         className
       )}
     >
@@ -112,7 +121,6 @@ const FloatingDockDesktop = ({
     </motion.div>
   );
 };
-
 function IconContainer({
   mouseX,
   title,
