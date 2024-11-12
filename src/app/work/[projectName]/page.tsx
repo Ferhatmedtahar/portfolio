@@ -57,14 +57,14 @@ const ProjectOverview = ({ params }: { params: { projectName: string } }) => {
             </div>
 
             <div
-              className="rounded-lg overflow-hidden  border-primary-700 border-2 w-fit h-fit mx-auto mb-14 "
+              className="rounded-lg overflow-hidden  shadow-lg shadow-primary-600 border-primary-700 border-2 w-fit h-fit mx-auto mb-14 "
               id="image"
             >
               <Image
                 src={image}
                 width={1000}
                 height={800}
-                alt={`${projectName} project image rounded-lg `}
+                alt={`${projectName} project image rounded-lg`}
               />
             </div>
 

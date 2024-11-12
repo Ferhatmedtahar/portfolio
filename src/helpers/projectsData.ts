@@ -51,7 +51,7 @@ export const projects: ProjectProps[] = [
     projectName: "scrubandshine",
     Header: "Scrub & Shine",
     image: "/projects/scrubandshine.png",
-    link: "/work/scrumbandshine",
+    link: "/work/scrubandshine",
     tags: [
       "TypeScript",
       "React",
@@ -83,7 +83,7 @@ export const projects: ProjectProps[] = [
     summary: "AI tool for summarizing long articles quickly.",
   },
   {
-    projectName: "hiLink",
+    projectName: "hilink",
     Header: "HiLink",
     image: "/projects/hiLink.png",
     link: "/work/hilink",

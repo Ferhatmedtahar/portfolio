@@ -11,7 +11,7 @@ export default function Hero() {
       <div className="absolute pointer-events-none inset-0 flexCenter  bg-primary-950 [mask-image:radial-gradient(ellipse_at_center,transparent_10%,black)]"></div>
       <div className="absolute inset-0 bg-gradient-to-b from-transparent to-[#030717]/60"></div>
       <div className=" relative z-20 flexCenter gap-2  flex-col  ">
-        <h1 className="  text-2xl xs:text-5xl sm:text-7xl  py-8 max-w-xl sm:max-w-3xl  text-center ">
+        <h1 className="cursor-default text-primary-100 text-2xl xs:text-5xl sm:text-7xl  py-8 max-w-xl sm:max-w-3xl  text-center ">
           Turning Ideas into{" "}
           <span className="blue-gradient ">Digital Experiences</span>
         </h1>

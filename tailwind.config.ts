@@ -50,7 +50,7 @@ const config: Config = {
       },
 
       colors: {
-        "primary-50": "#edfafc",
+        "primary-50": "#d0f0f0",
         "primary-100": "#e0f3ff",
         "primary-200": "#A3C7EE",
         "primary-300": "#84B4F3",
