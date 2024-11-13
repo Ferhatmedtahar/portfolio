@@ -19,7 +19,7 @@ export const techStack = [
   },
   {
     name: "Next.js",
-    image: "/logos/nextjs.svg",
+    image: "/logos/Nextjs.svg",
     color: "#200000",
     description: "The React Framework.",
   },
