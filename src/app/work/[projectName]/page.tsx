@@ -7,12 +7,12 @@ import Image from "next/image";
 import Link from "next/link";
 import { notFound } from "next/navigation";
 
-export function generateMetadata({
+export async function generateMetadata({
   params,
 }: {
-  params: { projectName: string };
+  params: Promise<{ projectName: string }>;
 }) {
-  const projectId = params.projectName;
+  const projectId = (await params).projectName;
   const project = projects.find((project) => project.projectName === projectId);
 
   if (!project) return { title: "Not Found" };
