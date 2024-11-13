@@ -7,7 +7,7 @@ import Image from "next/image";
 import Link from "next/link";
 import { notFound } from "next/navigation";
 
-export function genetrateMetadaa({
+export function generateMetadata({
   params,
 }: {
   params: { projectName: string };
