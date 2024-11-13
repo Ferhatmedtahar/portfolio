@@ -6,8 +6,9 @@ export default function ProjectGrid() {
     <div className="grid grid-cols-1 md:grid-cols-2 gap-4 pt-8">
       {columns.map((column, colIndex) => (
         <div key={colIndex} className="grid gap-4">
-          {column.map((project) => (
+          {column.map((project, index) => (
             <ProjectCard
+              index={index}
               summary={project.summary}
               key={project.projectName}
               projectName={project.projectName}

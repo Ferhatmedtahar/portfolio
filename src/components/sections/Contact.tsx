@@ -1,7 +1,23 @@
+"use client";
 import { contacts } from "@/helpers/ContactData";
+import { motion, useInView } from "framer-motion";
+import { useRef } from "react";
 import ContactCard from "../ContactCard";
-
+const cardVariants = {
+  hidden: { opacity: 0, y: 30 },
+  visible: () => ({
+    opacity: 1,
+    y: 0,
+    transition: {
+      delay: 0.5 * 0.3,
+      duration: 0.5,
+      ease: "easeInOut",
+    },
+  }),
+};
 export default function Contact() {
+  const ref = useRef(null);
+  const isInView = useInView(ref, { once: true });
   return (
     <section
       id="contact"
@@ -18,7 +34,13 @@ export default function Contact() {
           let&apos;s bring great ideas to life together!
         </p>
       </div>
-      <div className="  font-poppins flex flex-col md:flex-row gap-12  ">
+      <motion.div
+        ref={ref}
+        initial="hidden"
+        animate={isInView ? "visible" : "hidden"}
+        variants={cardVariants}
+        className="  font-poppins flex flex-col md:flex-row gap-12  "
+      >
         {contacts.map(function contactsCard(contact) {
           return (
             <ContactCard
@@ -29,7 +51,7 @@ export default function Contact() {
             />
           );
         })}
-      </div>
+      </motion.div>
     </section>
   );
 }

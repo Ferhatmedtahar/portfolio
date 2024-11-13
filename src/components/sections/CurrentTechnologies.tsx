@@ -20,9 +20,10 @@ export default function CurrentTechnologies() {
       </div>
 
       <ul className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 xl:grid-cols-4  gap-4">
-        {techStack.map(function cards(tech) {
+        {techStack.map(function cards(tech, index) {
           return (
             <TechCard
+              index={index}
               key={tech.name}
               name={tech.name}
               color={tech.color}
