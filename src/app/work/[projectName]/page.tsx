@@ -65,7 +65,7 @@ async function ProjectOverview({
             <div className="flex items-center justify-center   my-24">
               <Link href="#image" aria-label="scroll down">
                 <MoveDown
-                  className="size-16 text-primary-200 "
+                  className="size-16 text-primary-200"
                   strokeWidth={1}
                 />
               </Link>
