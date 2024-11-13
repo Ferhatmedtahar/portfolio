@@ -33,6 +33,7 @@ async function ProjectOverview({
   if (!project) return notFound();
 
   const {
+    Header,
     projectName,
     image,
     description,
@@ -54,7 +55,7 @@ async function ProjectOverview({
           <div className="relative z-10">
             <h1 className=" text-2xl md:text-3xl lg:text-4xl text-center max-w-3xl font-normal  tracking-wide  uppercase mx-auto">
               <p className="font-thin text-3xl sm:text-5xl md:text-7xl text-primary-500 font-Merriweather pb-4 ">
-                {projectName}
+                {Header}
               </p>
 
               <span className="font-normal text-lg sm:text-xl md:text-2xl text-primary-300 ">

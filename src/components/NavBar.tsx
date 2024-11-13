@@ -12,7 +12,7 @@ const links = [
     icon: (
       <IconHome className="h-full w-full text-primary-200 sm:text-primary-500" />
     ),
-    href: "/",
+    href: "/#home",
   },
   {
     title: "Technologies",

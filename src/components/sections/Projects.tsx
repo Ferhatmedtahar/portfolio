@@ -1,5 +1,4 @@
 import { OtherTech } from "../OtherTech";
-
 import ProjectGrid from "../ProjectGrid";
 
 export default function Projects() {

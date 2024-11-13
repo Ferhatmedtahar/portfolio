@@ -16,7 +16,7 @@ export const cloudProps: Omit<ICloud, "children"> = {
       justifyContent: "center",
       alignItems: "center",
       width: "100%",
-      paddingTop: 40,
+      paddingTop: 20,
     },
   },
   options: {
@@ -31,8 +31,7 @@ export const cloudProps: Omit<ICloud, "children"> = {
     tooltipDelay: 0,
     outlineColour: "#0000",
     maxSpeed: 0.04,
-    minSpeed: 0.015,
-    // dragControl: false,
+    minSpeed: 0.02,
   },
 };
 
@@ -46,7 +45,7 @@ export const renderCustomIcon = (icon: SimpleIcon, theme: string) => {
     bgHex,
     fallbackHex,
     minContrastRatio,
-    size: 42,
+    size: 40,
     aProps: {
       href: undefined,
       target: undefined,
@@ -64,10 +63,17 @@ type IconData = Awaited<ReturnType<typeof fetchSimpleIcons>>;
 
 export default function IconCloud({ iconSlugs }: DynamicCloudProps) {
   const [data, setData] = useState<IconData | null>(null);
+  const [isClient, setIsClient] = useState(false);
+
+  // Ensure component only renders on the client side
+  useEffect(() => {
+    setIsClient(true);
+  }, []);
 
   useEffect(() => {
+    if (!isClient) return;
     fetchSimpleIcons({ slugs: iconSlugs }).then(setData);
-  }, [iconSlugs]);
+  }, [iconSlugs, isClient]);
 
   const renderedIcons = useMemo(() => {
     if (!data) return null;
@@ -77,10 +83,7 @@ export default function IconCloud({ iconSlugs }: DynamicCloudProps) {
     );
   }, [data]);
 
-  return (
-    // @ts-ignore
-    <Cloud {...cloudProps}>
-      <>{renderedIcons}</>
-    </Cloud>
-  );
+  if (!isClient) return null; // Prevent server-side rendering
+  // @ts-ignore
+  return <Cloud {...cloudProps}>{renderedIcons}</Cloud>;
 }

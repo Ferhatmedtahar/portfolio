@@ -1,3 +1,4 @@
+"use client";
 import { MagicCard } from "@/components/ui/magic-cart";
 import Image from "next/image";
 import Link from "next/link";
