@@ -7,7 +7,7 @@ import Image from "next/image";
 import Link from "next/link";
 import { notFound } from "next/navigation";
 
-export function generateMetadata({
+export function genetrateMetadaa({
   params,
 }: {
   params: { projectName: string };
@@ -22,16 +22,28 @@ export function generateMetadata({
   };
 }
 
-const ProjectOverview = ({ params }: { params: { projectName: string } }) => {
-  const projectId = params.projectName;
+async function ProjectOverview({
+  params,
+}: {
+  params: Promise<{ projectName: string }>;
+}) {
+  const projectId = (await params).projectName;
   const project = projects.find((project) => project.projectName == projectId);
 
   if (!project) return notFound();
 
-  const { projectName, image, description, tags, summary } = project;
+  const {
+    projectName,
+    image,
+    description,
+    tags,
+    summary,
+    sourceCode,
+    demoLink,
+  } = project;
 
   return (
-    <main className="flex flex-col px-5 sm:px-10 relative  bg-primary-950 ">
+    <main className=" font-poppins flex flex-col px-5 sm:px-10 relative  bg-primary-950 ">
       <NavBar />
       <div className="max-w-7xl mx-auto w-full">
         <div className="pt-36">
@@ -40,19 +52,22 @@ const ProjectOverview = ({ params }: { params: { projectName: string } }) => {
           </div>
 
           <div className="relative z-10">
-            <h1 className=" text-2xl md:text-3xl lg:text-4xl text-center max-w-3xl font-normal leading-normal tracking-wide  uppercase mx-auto">
-              <p className="font-thin text-6xl md:text-7xl text-primary-500 font-Merriweather pb-4 ">
+            <h1 className=" text-2xl md:text-3xl lg:text-4xl text-center max-w-3xl font-normal  tracking-wide  uppercase mx-auto">
+              <p className="font-thin text-3xl sm:text-5xl md:text-7xl text-primary-500 font-Merriweather pb-4 ">
                 {projectName}
               </p>
 
-              <span className="font-normal text-3xl md:text-4xl text-primary-300">
+              <span className="font-normal text-lg sm:text-xl md:text-2xl text-primary-300 ">
                 {summary}
               </span>
             </h1>
 
             <div className="flex items-center justify-center   my-24">
-              <Link href="#image">
-                <MoveDown className="size-16" strokeWidth={1} />
+              <Link href="#image" aria-label="scroll down">
+                <MoveDown
+                  className="size-16 text-primary-200 "
+                  strokeWidth={1}
+                />
               </Link>
             </div>
 
@@ -64,7 +79,7 @@ const ProjectOverview = ({ params }: { params: { projectName: string } }) => {
                 src={image}
                 width={1000}
                 height={800}
-                alt={`${projectName} project image rounded-lg`}
+                alt={`${projectName} project image `}
               />
             </div>
 
@@ -78,13 +93,13 @@ const ProjectOverview = ({ params }: { params: { projectName: string } }) => {
 
                 <div className="flex items-center gap-4 mt-10">
                   <ShinyButton icon={<Globe />}>
-                    <Link href={""} target="_blank">
+                    <Link href={demoLink} target="_blank">
                       View Demo
                     </Link>
                   </ShinyButton>
 
                   <ShinyButton icon={<Code />}>
-                    <Link href={""} target="_blank">
+                    <Link href={sourceCode} target="_blank">
                       Source Code
                     </Link>
                   </ShinyButton>
@@ -100,6 +115,6 @@ const ProjectOverview = ({ params }: { params: { projectName: string } }) => {
       </div>
     </main>
   );
-};
+}
 
 export default ProjectOverview;

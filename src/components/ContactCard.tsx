@@ -17,11 +17,12 @@ export default function ContactCard({
   return (
     <Link
       href={link}
+      target="_blank"
       className={
         "flex h-[200px] w-full flex-col gap-4 lg:h-[250px] lg:flex-row   relative "
       }
     >
-      {social == "Linkedin" && (
+      {(social == "Linkedin" || social == "Email") && (
         <div className="absolute inset-0  z-10 pointer-events-none  rounded-xl overflow-hidden">
           <BorderBeam
             size={160}

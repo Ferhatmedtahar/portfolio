@@ -5,6 +5,7 @@
     "@typescript-eslint/no-unused-vars": "warn",
     "react/jsx-key": "warn",
     "@typescript-eslint/no-explicit-any": "off",
-    "prefer-const": "off"
+    "prefer-const": "off",
+    "@typescript-eslint/ban-ts-comment": "off"
   }
 }

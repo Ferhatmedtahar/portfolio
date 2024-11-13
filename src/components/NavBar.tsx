@@ -12,7 +12,7 @@ const links = [
     icon: (
       <IconHome className="h-full w-full text-primary-200 sm:text-primary-500" />
     ),
-    href: "/#hero",
+    href: "/",
   },
   {
     title: "Technologies",
@@ -47,8 +47,8 @@ const links = [
 
 export default function NavBar() {
   return (
-    <div className="flex items-center justify-center sticky    top-24 z-20 h-0  w-full">
-      <FloatingDock items={links} desktopClassName="" mobileClassName="" />
+    <div className=" font-poppins flex items-center justify-center sticky    top-24 z-20 h-0  w-full">
+      <FloatingDock items={links} />
     </div>
   );
 }

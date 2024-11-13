@@ -21,6 +21,7 @@ export default function ProjectCard({
   return (
     <Link
       href={link}
+      target="_blank"
       aria-label={`View project details for ${projectName}`}
       className="font-poppins"
     >

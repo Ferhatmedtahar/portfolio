@@ -3,7 +3,7 @@ import Link from "next/link";
 
 export default function NotFound() {
   return (
-    <section className="h-screen flexCenter flex-col bg-primary-900 bg-grid-primary-500/[0.2]">
+    <section className="font-poppins h-screen flexCenter flex-col bg-primary-900 bg-grid-primary-500/[0.2]">
       <div className="absolute inset-0 flexCenter bg-primary-950 [mask-image:radial-gradient(ellipse_at_center,transparent_10%,black)]"></div>
       <div className="absolute inset-0 bg-gradient-to-b from-transparent to-[#030717]/60"></div>
       <div className="relative z-20 text-center flexCenter flex-col gap-6">

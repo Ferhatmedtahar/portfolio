@@ -6,6 +6,8 @@ type ProjectProps = {
   tags: string[];
   description: string;
   summary: string;
+  sourceCode: string;
+  demoLink: string;
 };
 
 // Updated project data with detailed descriptions
@@ -15,6 +17,8 @@ export const projects: ProjectProps[] = [
     Header: "Akkadli",
     image: "/projects/akkadli.png",
     link: "/work/akkadli",
+    sourceCode: "https://github.com/Omed-team/akkadli-frontend",
+    demoLink: "https://akkadli.com/",
     tags: [
       "TypeScript",
       "React",
@@ -35,6 +39,8 @@ export const projects: ProjectProps[] = [
     Header: "The Wild Oasis",
     image: "/projects/WebWildOasisLanding.webp",
     link: "/work/thewildoasis",
+    sourceCode: "https://github.com/Ferhatmedtahar/The-Wild-Oasis",
+    demoLink: "https://the-wild-oasis-beta-five.vercel.app/",
     tags: [
       "TypeScript",
       "React",
@@ -52,6 +58,8 @@ export const projects: ProjectProps[] = [
     Header: "Scrub & Shine",
     image: "/projects/scrubandshine.png",
     link: "/work/scrubandshine",
+    sourceCode: "https://github.com/Ferhatmedtahar/scrub-and-shine-product",
+    demoLink: "https://scrub-and-shine-product.vercel.app/",
     tags: [
       "TypeScript",
       "React",
@@ -61,14 +69,16 @@ export const projects: ProjectProps[] = [
       "mongodb",
     ],
     description:
-      "Scrub & Shine is an agile project management tool tailored for teams to collaborate, plan, and execute their projects effectively. The platform provides features such as task boards, sprint planning, and real-time collaboration to help teams stay on track and meet their goals. Built with Next.js, MongoDB, and Tailwind CSS, it delivers a smooth and responsive user experience. The tool is designed to simplify project workflows, making it ideal for both startups and large enterprises focused on agile methodologies.",
-    summary: "Agile project management for teams.",
+      "Scrub & Shine is a management platform designed for efficiently organizing tasks and room assignments. Users can seamlessly create, update, and delete tasks and rooms, allowing for streamlined cleaning and maintenance operations. The platform features secure authentication using magic links, ensuring easy access for cleaners. Built with Next.js, MongoDB, and Tailwind CSS, Scrub & Shine offers a user-friendly interface optimized for a responsive and intuitive experience, making it the ideal tool for managing cleaning schedules and assignments.",
+    summary: " cleaning and maintenance management for cleaners.",
   },
   {
     projectName: "aiSummarizer",
     Header: "AI Summarizer",
     image: "/projects/aiSummarizer.png",
     link: "/work/aiSummarizer",
+    sourceCode: "https://github.com/Ferhatmedtahar/AI-summarizer",
+    demoLink: "https://ai-summarizer-lovat.vercel.app/",
     tags: [
       "TypeScript",
       "React",
@@ -88,6 +98,8 @@ export const projects: ProjectProps[] = [
     image: "/projects/hiLink.png",
     link: "/work/hilink",
     tags: ["TypeScript", "React", "Next.js", "Tailwind CSS"],
+    sourceCode: "https://github.com/Ferhatmedtahar/Hilink-camp",
+    demoLink: "https://hilink-camp-gray.vercel.app/",
     description:
       "HiLink is a versatile profile-building platform that allows users to create personalized profiles with multiple shareable links. It's perfect for influencers, freelancers, and professionals who want to consolidate their online presence. The application is optimized for speed and responsiveness, enabling users to easily share their profiles across various platforms. Built with TypeScript and Next.js, HiLink focuses on simplicity and efficiency, helping users boost their online visibility.",
     summary: "Create profiles with multiple sharable links.",
@@ -97,9 +109,11 @@ export const projects: ProjectProps[] = [
     projectName: "clipboard",
     image: "/projects/clipboard.png",
     link: "/work/clipboard",
+    sourceCode: "https://github.com/Ferhatmedtahar/clipboard",
+    demoLink: "https://clipboard-blond.vercel.app/",
     tags: ["TypeScript", "React", "Vitejs", "Tailwind CSS"],
     description:
-      "Clipboard is a productivity tool designed to help users manage their clipboard history effortlessly. Whether you're a developer, writer, or anyone who frequently copies and pastes content, this tool lets you organize, store, and access your clipboard history with ease. Utilizing Vite.js for blazing-fast performance and React for a smooth UI, Clipboard enhances productivity by making frequently used snippets readily available.",
+      "Clipboard is a productivity tool designed to help users manage their clipboard history effortlessly. Whether you're a developer, writer, or anyone who frequently copies and pastes content, this tool lets you organize, store, and access your clipboard history with ease. Utilizing Vite.js for blazing-fast performance and React for a smooth UI, Clipboard enhances productivity by making frequently used snippets readily available.functionality still not available yet.",
     summary: "Manage clipboard history with ease.",
   },
 ];

@@ -11,11 +11,17 @@ export default function Hero() {
       <div className="absolute pointer-events-none inset-0 flexCenter  bg-primary-950 [mask-image:radial-gradient(ellipse_at_center,transparent_10%,black)]"></div>
       <div className="absolute inset-0 bg-gradient-to-b from-transparent to-[#030717]/60"></div>
       <div className=" relative z-20 flexCenter gap-2  flex-col  ">
-        <h1 className="cursor-default text-primary-100 text-4xl  sm:text-5xl md:text-7xl  py-8 max-w-xl sm:max-w-3xl  text-center ">
+        <p className="uppercase font-poppins font-bold text-sm tracking-widest">
+          Based In Algeria
+        </p>
+        <h1 className=" cursor-default text-primary-200 text-4xl  sm:text-5xl md:text-7xl max-w-xl sm:max-w-3xl text-center flex flex-col sm:gap-2 ">
           Turning Ideas into{" "}
-          <span className="blue-gradient ">Digital Experiences</span>
+          <span className="blue-gradient sm:text-nowrap sm:h-[80px] text-4xl sm:text-5xl md:text-7xl ">
+            Digital Experiences
+          </span>
         </h1>
-        <p className="pt-2 pb-8 text-sm sm:text-base md:text-lg font-light text-stone-300/70  text-center">
+        {/* sub header */}
+        <p className="pt-4 pb-8 text-sm sm:text-base md:text-lg font-light text-stone-300/70  text-center max-w-xl">
           Hi, I&apos;m Ferhat, I create intuitive, visually stunning and highly
           functional web applications.
         </p>
@@ -27,7 +33,7 @@ export default function Hero() {
           </Link>
           <div className="flex gap-2 cursor-pointer">
             <Download className="w-6 h-6 text-primary-500" />
-            <p className="text-sm sm:text-base font-light font-poppins text-primary-100/90 text-center">
+            <p className="text-sm sm:text-base font-light font-poppins text-primary-100/90 text-center text-nowrap">
               Download CV
             </p>
           </div>
