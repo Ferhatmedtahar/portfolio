@@ -1,7 +1,5 @@
 import { columns } from "@/helpers/projectsData";
-// import { OtherTech } from "../components/OtherTech";
 import ProjectCard from "./Project";
-// <OtherTech />
 
 export default function ProjectGrid() {
   return (
@@ -10,8 +8,8 @@ export default function ProjectGrid() {
         <div key={colIndex} className="grid gap-4">
           {column.map((project) => (
             <ProjectCard
+              summary={project.summary}
               key={project.projectName}
-              description={project.description}
               projectName={project.projectName}
               image={project.image}
               link={project.link}
@@ -20,7 +18,6 @@ export default function ProjectGrid() {
           ))}
         </div>
       ))}
-      {/* <OtherTech /> */}
     </div>
   );
 }
