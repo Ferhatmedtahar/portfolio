@@ -38,7 +38,7 @@ export default function TechCard({
       initial="hidden"
       animate={isInView ? "visible" : "hidden"}
       variants={cardVariants}
-      custom={index} // Pass index to the variants for staggered delay
+      custom={index}
       className="font-poppins flex items-center flex-1 gap-5 p-2.5 rounded-xl border border-primary-700 bg-primary-900 hover:bg-primary-800 hover:border-primary-500 transition-colors duration-200"
     >
       <div
