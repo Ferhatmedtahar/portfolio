@@ -1,9 +1,9 @@
 import Footer from "@/components/Footer";
+import favIcon from "@/public/favicon.ico";
+import ogImage from "@/public/ogImage.png";
 import type { Metadata } from "next";
 import { Merriweather, Poppins } from "next/font/google";
 import "./globals.css";
-import ogImage from "@/public/og-image.png";
-import favIcon from "@/public/favicon.ico";
 
 const poppins = Poppins({
   subsets: ["latin"],
