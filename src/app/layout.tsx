@@ -74,10 +74,8 @@ export default function RootLayout({
 }: Readonly<{
   children: React.ReactNode;
 }>) {
-  console.log(ogImage, favIcon);
   return (
     <html lang="en">
-      <meta property="og:image" content="/og.png" />
       <body
         className={` antialiased ${merriweather.className}  ${poppins.className} `}
       >

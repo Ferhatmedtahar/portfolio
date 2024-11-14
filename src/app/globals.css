@@ -48,6 +48,19 @@ li::marker {
   text-fill-color: transparent;
 }
 
+.light-shadow {
+  width: 50px;
+  height: 50px;
+  background-color: #d0f3ef;
+  filter: blur(80px);
+  position: fixed;
+  top: 0%;
+  bottom: auto;
+  left: 0%;
+  right: auto;
+  z-index: -10;
+}
+
 .cyan-gradient {
   background: linear-gradient(120deg, #00f0cf 12.87%, #00ff6f 49%, #00f0ff 80%);
   background-clip: text;
@@ -55,7 +68,6 @@ li::marker {
   -webkit-text-fill-color: transparent;
 }
 
-/* Customize the scrollbar for WebKit-based browsers (like Chrome)*/
 @layer base {
   ::-webkit-scrollbar {
     width: 6px;

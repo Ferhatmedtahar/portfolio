@@ -5,8 +5,9 @@ export default function CurrentTechnologies() {
   return (
     <section
       id="tech"
-      className="font-poppins max-container padding-container pt-16 flex    flex-col gap-12"
+      className="font-poppins max-container padding-container pt-16 flex  relative  flex-col gap-12"
     >
+      <div className="absolute -top-5 inset-x-0 h-10 bg-[#001028]/50   blur-[9px]  "></div>
       <div className="flex flex-col gap-4">
         <h1 className=" sm:text-start text-center tracking-[0.030rem]  text-2xl lg:text-5xl  md:text-4xl font-medium  text-primary-200 underline  underline-offset-[6px] ">
           Current Technologies

@@ -22,7 +22,7 @@ const slugs = [
 ];
 export function OtherTech() {
   return (
-    <div className="   self-center order-first sm:order-last relative flex size-full  max-w-sm md:max-w-md lg:max-w-lg items-center justify-center overflow-hidden rounded-lg bg-background px-2 py-2   ">
+    <div className="   self-center order-first sm:order-last relative flex size-full  max-w-sm md:max-w-md lg:max-w-lg items-center justify-center overflow-hidden  px-2 py-2   ">
       <IconCloud iconSlugs={slugs} />
     </div>
   );
