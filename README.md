@@ -1,4 +1,4 @@
-# ![Ferhat's Portfolio](./ogImage.png)
+# ![Ferhat's Portfolio](./public/ogImage.png)
 
 ## 🌐 Portfolio Overview
 
