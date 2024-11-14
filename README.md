@@ -6,8 +6,6 @@ Welcome to my personal portfolio! 🚀 Dive in to explore my journey, projects, 
 
 ## Come take a look 🤩 : [My portfolio](https://portfolio-chi-nine-57.vercel.app/)
 
-# 🖥️ Sections
-
 ## 🚀 Hero Section
 
 - A captivating introduction to who I am and what I do, along with smooth scrolling animations to guide visitors.
