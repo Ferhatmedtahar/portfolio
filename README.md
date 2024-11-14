@@ -4,7 +4,7 @@
 
 Welcome to my personal portfolio! 🚀 Dive in to explore my journey, projects, skills, and more.
 
----
+## Come take a look 🤩 : [My portfolio](https://portfolio-chi-nine-57.vercel.app/)
 
 # 🖥️ Sections
 
