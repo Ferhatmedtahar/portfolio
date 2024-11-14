@@ -14,7 +14,7 @@ interface GradualSpacingProps {
 
 export function GradualSpacing({
   text,
-  duration = 1,
+  duration = 0.5,
   delayMultiple = 0.05,
   framerProps = {
     hidden: { opacity: 0, x: -15 },
