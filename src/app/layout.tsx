@@ -51,7 +51,7 @@ export const metadata: Metadata = {
     },
   },
   twitter: {
-    card: "app",
+    card: "summary_large_image",
     title: "Ferhat Mohamed Tahar | Fullstack Developer",
     description:
       "Experienced fullstack developer passionate about creating intuitive web solutions.",
