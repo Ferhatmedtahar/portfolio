@@ -5,7 +5,7 @@ export default function ProjectGrid() {
   return (
     <div className="grid grid-cols-1 md:grid-cols-2 gap-4 pt-8">
       {columns.map((column, colIndex) => (
-        <div key={colIndex} className="grid gap-4">
+        <ul key={colIndex} className="grid gap-4">
           {column.map((project, index) => (
             <ProjectCard
               index={index}
@@ -17,7 +17,7 @@ export default function ProjectGrid() {
               tags={project.tags}
             />
           ))}
-        </div>
+        </ul>
       ))}
     </div>
   );

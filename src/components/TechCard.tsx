@@ -33,7 +33,7 @@ export default function TechCard({
   const ref = useRef(null);
   const isInView = useInView(ref, { once: true });
   return (
-    <motion.div
+    <motion.li
       ref={ref}
       initial="hidden"
       animate={isInView ? "visible" : "hidden"}
@@ -62,6 +62,6 @@ export default function TechCard({
           {description}
         </p>
       </div>
-    </motion.div>
+    </motion.li>
   );
 }
