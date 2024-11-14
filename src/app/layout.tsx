@@ -1,9 +1,9 @@
 import Footer from "@/components/Footer";
 import type { Metadata } from "next";
 import { Merriweather, Poppins } from "next/font/google";
+import favIcon from "../../public/favicon.ico";
+import ogImage from "../../public/opengraph-image.png";
 import "./globals.css";
-import favIcon from "/public/favicon.ico";
-import ogImage from "/public/opengraph-image.png";
 
 const poppins = Poppins({
   subsets: ["latin"],
@@ -30,9 +30,9 @@ export const metadata: Metadata = {
     siteName: "Ferhat's Portfolio",
     images: [
       {
-        url: ogImage,
-        width: 1200,
-        height: 630,
+        url: ogImage.src,
+        width: ogImage.width,
+        height: ogImage.height,
         alt: "Ferhat Mohamed Tahar - Fullstack Developer",
       },
     ],
@@ -57,15 +57,15 @@ export const metadata: Metadata = {
       "Experienced fullstack developer passionate about creating intuitive web solutions.",
     images: [
       {
-        url: ogImage,
-        width: 1200,
-        height: 630,
+        url: ogImage.src,
+        width: ogImage.width,
+        height: ogImage.height,
         alt: "Ferhat Mohamed Tahar - Fullstack Developer",
       },
     ],
   },
   icons: {
-    shortcut: favIcon,
+    shortcut: favIcon.src,
   },
 };
 
@@ -74,8 +74,10 @@ export default function RootLayout({
 }: Readonly<{
   children: React.ReactNode;
 }>) {
+  console.log(ogImage, favIcon);
   return (
     <html lang="en">
+      <meta property="og:image" content="/og.png" />
       <body
         className={` antialiased ${merriweather.className}  ${poppins.className} `}
       >

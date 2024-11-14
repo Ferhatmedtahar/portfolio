@@ -1,10 +1,12 @@
 // images.d.ts
 declare module "*.png" {
-  const value: string;
+  const src: string;
+  const height: number;
+  const width: number;
   export default value;
 }
 
 declare module "*.ico" {
-  const value: string;
+  const src: string;
   export default value;
 }
