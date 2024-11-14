@@ -31,8 +31,8 @@ export const metadata: Metadata = {
     images: [
       {
         url: ogImage.src,
-        width: 1200,
-        height: 630,
+        width: ogImage.width,
+        height: ogImage.height,
         alt: "Ferhat Mohamed Tahar - Fullstack Developer",
       },
     ],
@@ -51,15 +51,15 @@ export const metadata: Metadata = {
     },
   },
   twitter: {
-    card: "summary_large_image",
+    card: "sFERHAT",
     title: "Ferhat Mohamed Tahar | Fullstack Developer",
     description:
       "Experienced fullstack developer passionate about creating intuitive web solutions.",
     images: [
       {
-        url: ogImage.src,
-        width: 1200,
-        height: 630,
+      url: ogImage.src,
+        width: ogImage.width,
+        height: ogImage.height,
         alt: "Ferhat Mohamed Tahar - Fullstack Developer",
       },
     ],
